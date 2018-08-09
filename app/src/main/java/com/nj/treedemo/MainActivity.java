@@ -28,20 +28,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        mList.add(new Peijlb(1, 0, "中国古代"));
-        mList.add(new Peijlb(2, 1, "唐朝"));
-        mList.add(new Peijlb(3, 1, "宋朝"));
-        mList.add(new Peijlb(4, 1, "明朝"));
-        mList.add(new Peijlb(5, 2, "李世民"));
-        mList.add(new Peijlb(6, 2, "李白"));
-        mList.add(new Peijlb(7, 3, "赵匡胤"));
-        mList.add(new Peijlb(8, 3, "苏轼"));
-        mList.add(new Peijlb(9, 4, "朱元璋"));
-        mList.add(new Peijlb(10, 4, "唐伯虎"));
-        mList.add(new Peijlb(11, 4, "文征明"));
-        mList.add(new Peijlb(12, 7, "赵建立"));
-        mList.add(new Peijlb(13, 8, "苏东东"));
-        mList.add(new Peijlb(14, 10, "秋香"));
-
+        mList.add(new Peijlb("1", 0, "中国古代"));
+        mList.add(new Peijlb("2", 1, "唐朝"));
+        mList.add(new Peijlb("3", 1, "宋朝"));
+        mList.add(new Peijlb("4", 1, "明朝"));
+        mList.add(new Peijlb("5", 2, "李世民"));
+        mList.add(new Peijlb("6", 2, "李白"));
+        mList.add(new Peijlb("7", 3, "赵匡胤"));
+        mList.add(new Peijlb("8", 3, "苏轼"));
+        mList.add(new Peijlb("9", 4, "朱元璋"));
+        mList.add(new Peijlb("10", 4, "唐伯虎"));
+        mList.add(new Peijlb("11", 4, "文征明"));
+        mList.add(new Peijlb("12", 7, "赵建立"));
+        mList.add(new Peijlb("13", 8, "苏东东"));
+        mList.add(new Peijlb("14", 10, "秋香"));
     }
 }

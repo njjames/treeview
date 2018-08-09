@@ -5,8 +5,8 @@ package com.nj.treedemo;
  */
 
 public class Peijlb {
-    @TreeNodeId
-    public int peijlb_dm;
+    @TreeNodeId(type = String.class)
+    public String peijlb_dm;
     @TreeNodePid
     public int peijlb_top;
     @TreeNodeLabel
@@ -15,7 +15,7 @@ public class Peijlb {
     public Peijlb() {
     }
 
-    public Peijlb(int peijlb_dm, int peijlb_top, String peijlb_mc) {
+    public Peijlb(String peijlb_dm, int peijlb_top, String peijlb_mc) {
         this.peijlb_dm = peijlb_dm;
         this.peijlb_top = peijlb_top;
         this.peijlb_mc = peijlb_mc;
