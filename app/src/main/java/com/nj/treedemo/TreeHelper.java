@@ -26,13 +26,12 @@ public class TreeHelper {
         List<Node> nodes = convetData2Node(datas);
         //拿到根节点
         List<Node> rootNodes = getRootNodes(nodes);
-        //排序
+        //排序，从根节点开始依次把节点添加到result中
         for (Node node : rootNodes) {
             addNode(result, node, defaultExpandLevel, 1);
         }
         return result;
     }
-
 
     /**
      * 过滤出所有可见的Node
@@ -150,8 +149,11 @@ public class TreeHelper {
             node.setIcon(R.drawable.tree_ex);
         } else if (node.getChildren().size() > 0 && !node.isExpand()) {
             node.setIcon(R.drawable.tree_ec);
-        } else
-            node.setIcon(-1);
+        } else {
+            // 不能是-1，否则会报android.content.res.Resources$NotFoundException: Resource ID #0xffffffff
+            // 是0就可以了
+            node.setIcon(0);
+        }
     }
 
 }

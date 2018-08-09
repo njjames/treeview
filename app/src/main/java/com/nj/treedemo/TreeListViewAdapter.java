@@ -12,6 +12,7 @@ import android.widget.ListView;
 import java.util.List;
 
 /**
+ * 原理就是：展开个关闭的时候更新集合，然后刷新试图，试图出再根据不同级别的类别再进行不同的缩进显示
  * Created by Administrator on 2018-08-09.
  */
 
@@ -117,11 +118,10 @@ public abstract class TreeListViewAdapter<T> extends BaseAdapter {
         Node node = mNodes.get(position);
         convertView = getConvertView(node, position, convertView, parent);
         // 设置内边距
-        convertView.setPadding(node.getLevel() * 30, 3, 3, 3);
+        convertView.setPadding(node.getLevel() * 70, 3, 3, 3);
         return convertView;
     }
 
-    public abstract View getConvertView(Node node, int position,
-                                        View convertView, ViewGroup parent);
+    public abstract View getConvertView(Node node, int position, View convertView, ViewGroup parent);
 
 }
